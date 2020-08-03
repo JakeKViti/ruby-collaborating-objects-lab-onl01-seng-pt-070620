@@ -6,7 +6,7 @@ class MP3Importer
   end
 
   def files
-    return Dir["#{@path}/**/*.mp3"]
+    return Dir["#{@path}/*.mp3"]
   end
 
   def import
