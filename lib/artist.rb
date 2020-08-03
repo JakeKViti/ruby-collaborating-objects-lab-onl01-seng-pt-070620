@@ -29,7 +29,7 @@ class Artist
 
   def self.find_or_create_by_name(name)
     #binding.pry
-    if !self.find(name) == nil
+    if self.find(name)
       self.find(name)
     else
     self.create_by_name(name)
