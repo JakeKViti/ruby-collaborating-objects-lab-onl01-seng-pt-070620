@@ -19,7 +19,7 @@ class Song
     songName = filename[1]
     song = Song.new(songName)
     artist = Artist.find_or_create_by_name(artist_name)
-    artist.songs << song
+    artist.songs << @@all
     song
    end
 
