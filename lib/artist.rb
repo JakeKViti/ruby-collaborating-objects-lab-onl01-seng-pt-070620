@@ -40,6 +40,7 @@ class Artist
       name
     end
     end
+    end
   end
 
   def print_songs
