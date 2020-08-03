@@ -36,6 +36,12 @@ class Artist
     self.all.find {|name| name.name == name}
   end
 
+  def self.create_by_name(name)
+    name = Artist.new(name)
+    name.save
+    name
+  end
+
   def print_songs
     self.songs.each {|song| puts song.name}
   end
