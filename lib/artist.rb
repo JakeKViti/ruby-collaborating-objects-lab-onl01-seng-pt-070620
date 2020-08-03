@@ -1,4 +1,4 @@
-
+require "pry"
 class Artist
 
   attr_accessor :name, :song
@@ -25,7 +25,7 @@ class Artist
   end
 
   def self.find_or_create_by_name(song)
-
+    binding.pry
     if Song.all.include?(song)
     song = Song.new(song)
     add_song(song)
