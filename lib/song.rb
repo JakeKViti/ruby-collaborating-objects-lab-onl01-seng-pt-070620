@@ -14,13 +14,14 @@ class Song
   end
 
   def self.new_by_filename(filename)
+    binding.pry
     filename = filename.chomp(".mp3").split(" - ")
     artistName = filename[0]
     songName = filename[1]
     song = Song.new(songName)
     song.artist_name = artistName
     song
-    binding.pry
+    
    end
 
 
