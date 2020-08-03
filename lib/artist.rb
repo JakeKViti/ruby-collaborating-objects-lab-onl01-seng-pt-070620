@@ -23,9 +23,9 @@ class Artist
      #song.artist = self
   end
 
-  def songs
-    @songs
-  end
+#  def songs
+    #@songs
+#  end
 
   def self.find_or_create_by_name(name)
     if self.find(name)
