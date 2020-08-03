@@ -17,6 +17,7 @@ class Song
     filename = filename.chomp(".mp3").split(" - ")
     artistName = filename[0]
     songName = filename[1]
+    binding.pry
     song = Song.new(songName)
     song.artist_name = artistName
     song
