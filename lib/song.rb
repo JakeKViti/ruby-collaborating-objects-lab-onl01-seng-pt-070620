@@ -20,14 +20,12 @@ class Song
     song = Song.new(songName)
     song.artist_name = artistName
     song
-    Artist.all.size = 1
-   end
+  end
 
 
   def artist_name=(name)
     artist = Artist.find_or_create_by_name(name)
     self.artist = artist
     artist.add_song(self)
-    #binding.pry
   end
 end
