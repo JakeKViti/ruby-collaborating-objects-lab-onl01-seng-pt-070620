@@ -37,7 +37,7 @@ class Artist
   end
 
   def self.find(name)
-    Artist.all.find {|name| name.name == name}
+    self.all.detect {|name| name.name == name}
   end
 
   def self.create_by_name(name)
