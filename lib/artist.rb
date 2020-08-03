@@ -8,6 +8,9 @@ class Artist
   def initialize(name)
     @name = name
     @songs = []
+  end
+
+  def save
     @@all << self
   end
 
@@ -24,14 +27,19 @@ class Artist
     @songs
   end
 
-  def self.find_or_create_by_name(song)
+  def self.find_or_create_by_name(name)
     #binding.pry
     #if Song.all.include?(song)
     #song = Song.new(song)
     #add_song(song)
     #end
     #return song
-    self.all.find  {|name| name.name == name}
+    if self.all.find  {|name| name.name == name} == nil
+      name = Artist.new(name)
+      name.save
+      name
+    end
+    end
   end
 
   def print_songs
