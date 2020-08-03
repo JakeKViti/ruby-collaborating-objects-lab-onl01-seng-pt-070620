@@ -27,11 +27,11 @@ class Artist
     if !Song.all == song
     song = Song.new(song)
     add_song(song)
-  end
-
+    end
+    
   end
 
   def print_songs
-    print self.name
+    print self.songs.each {|song| song.name}
   end
 end
